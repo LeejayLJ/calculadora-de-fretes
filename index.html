@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculadora de fretes</title>
+</head>
+<body>
+
+    <header>
+
+        <h1>Luciano Fretes</h1>
+        <p>Solicite seu orçamento</p>
+        
+    </header>
+
+    <main>
+        <form action="">
+
+            <section>
+
+                <h2>De onde para onde vamos?</h2>
+                <p>Informe os locais de retirada e entrega do seu frete.</p>
+
+                    <div>
+                        <label for="retirada">LOCAL DE RETIRADA</label>
+                        <input
+                        type="text"
+                        name="retirada"
+                        id="retirada"
+                        required
+                        placeholder="Digite o endereço">
+                    </div>
+
+                    <div>
+                        <label for="entrega">LOCAL DE ENTREGA</label>
+                        <input
+                        type="text"
+                        name="entrega"
+                        id="entrega"
+                        required
+                        placeholder="Digite o endereço">
+                    </div>
+
+                    <small>Quanto mais completo o endereço, mais fácil será calcular seu frete.</small><
+
+                    <button type="button">Continuar</button>
+
+            </section>
+
+
+            <section>
+
+                <h2>O que vamos transportar?</h2>
+                <p>Conta pra gente quais são os itens do seu frete.</p>
+
+                <div>
+                    <label for="itens">ITENS DO FRETE</label>
+                    <input
+                    type="text"
+                    name="itens"
+                    id="itens"
+                    required
+                    placeholder="Ex: 1 geladeira, 1 sofá, 3 caixas, 1 cama...">
+                </div>
+
+                <small>Por favor envie fotos ou videos dos itens via Whatsapp para facilitar a avaliação.</small>
+
+                <button type="button">Voltar</button>
+                <button type="button">Continuar</button>
+
+            </section>
+
+            <section>
+
+                <fieldset>
+
+                    <h2>Como é o acesso?</h2>
+                    <p>Essas informações ajudam a calcular o serviço necessário.</p>
+
+                    <h3>Acesso nos locais</h3>
+
+                    <div>
+                        <label for="terreo">Tudo térreo</label>
+                        <input 
+                        type="checkbox" 
+                        name="acesso" 
+                        id="terreo"
+                        value="terreo">
+                        <small>Sem escadas</small>
+                    </div>
+
+                    <div>
+                        <label for="escada">Tem escada</label>
+                        <input 
+                        type="checkbox" 
+                        name="acesso" 
+                        id="escada"
+                        value="escada">
+                        <small>Um ou mais lances</small>
+                    </div>
+
+                    <div>
+                        <label for="elevador">Tem elevador</label>
+                        <input 
+                        type="checkbox" 
+                        name="acesso" 
+                        id="elevador"
+                        value="elevador">
+                        <small>Elevador disponível</small>
+                    </div>
+
+                    <div>
+                        <label for="observacao-acesso">Observação:</label>
+                        <textarea name="observacao" id="observacao-acesso" required placeholder="Quantos andares?"></textarea>
+                    </div>
+
+                </fieldset>
+
+                <section>
+
+                    <h2>Precisa de ajuda para carregar?</h2>
+
+                    <div>
+                        <label for="sim">Sim</label>
+                        <input
+                        type="radio"
+                        name="ajuda"
+                        id="sim"
+                        value="sim">
+                        <small>Preciso de ajuda</small>
+                    </div>
+
+                    <div>
+                        <label for="nao">Não</label>
+                        <input 
+                        type="radio" 
+                        name="ajuda" 
+                        id="nao"
+                        value="nao">
+                        <small>Eu mesmo carrego</small>
+                    </div>
+
+                    <div>
+                        <label for="observacao-ajuda">Observação:</label>
+                        <textarea name="observacao-ajuda" id="observacao-ajuda" required placeholder="Quantos ajudantes ou outro detalhe?"></textarea>
+                    </div>
+
+                    <button type="button">Voltar</button>
+                    <button type="button">Continuar</button>
+
+                </section>
+
+            </section>
+
+
+
+        </form>
+    </main>
+
+    <footer></footer>
+
+ 
+</body>
+</html>
