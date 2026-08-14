@@ -29,21 +29,21 @@
                     <div>
                         <label for="retirada">LOCAL DE RETIRADA</label>
                         <input
-                        type="text"
-                        name="retirada"
-                        id="retirada"
-                        required
-                        placeholder="Digite o endereço">
+                            type="text"
+                            name="retirada"
+                            id="retirada"
+                            required
+                            placeholder="Digite o endereço">
                     </div>
 
                     <div>
                         <label for="entrega">LOCAL DE ENTREGA</label>
                         <input
-                        type="text"
-                        name="entrega"
-                        id="entrega"
-                        required
-                        placeholder="Digite o endereço">
+                            type="text"
+                            name="entrega"
+                            id="entrega"
+                            required
+                            placeholder="Digite o endereço">
                     </div>
 
                     <small>Quanto mais completo o endereço, mais fácil será calcular seu frete.</small><
@@ -61,11 +61,11 @@
                 <div>
                     <label for="itens">ITENS DO FRETE</label>
                     <input
-                    type="text"
-                    name="itens"
-                    id="itens"
-                    required
-                    placeholder="Ex: 1 geladeira, 1 sofá, 3 caixas, 1 cama...">
+                        type="text"
+                        name="itens"
+                        id="itens"
+                        required
+                        placeholder="Ex: 1 geladeira, 1 sofá, 3 caixas, 1 cama...">
                 </div>
 
                 <small>Por favor envie fotos ou videos dos itens via Whatsapp para facilitar a avaliação.</small>
@@ -87,30 +87,30 @@
                     <div>
                         <label for="terreo">Tudo térreo</label>
                         <input 
-                        type="checkbox" 
-                        name="acesso" 
-                        id="terreo"
-                        value="terreo">
+                            type="checkbox" 
+                            name="acesso" 
+                            id="terreo"
+                            value="terreo">
                         <small>Sem escadas</small>
                     </div>
 
                     <div>
                         <label for="escada">Tem escada</label>
                         <input 
-                        type="checkbox" 
-                        name="acesso" 
-                        id="escada"
-                        value="escada">
+                            type="checkbox" 
+                            name="acesso" 
+                            id="escada"
+                            value="escada">
                         <small>Um ou mais lances</small>
                     </div>
 
                     <div>
                         <label for="elevador">Tem elevador</label>
                         <input 
-                        type="checkbox" 
-                        name="acesso" 
-                        id="elevador"
-                        value="elevador">
+                            type="checkbox" 
+                            name="acesso" 
+                            id="elevador"
+                            value="elevador">
                         <small>Elevador disponível</small>
                     </div>
 
@@ -128,20 +128,20 @@
                     <div>
                         <label for="sim">Sim</label>
                         <input
-                        type="radio"
-                        name="ajuda"
-                        id="sim"
-                        value="sim">
+                            type="radio"
+                            name="ajuda"
+                            id="sim"
+                            value="sim">
                         <small>Preciso de ajuda</small>
                     </div>
 
                     <div>
                         <label for="nao">Não</label>
                         <input 
-                        type="radio" 
-                        name="ajuda" 
-                        id="nao"
-                        value="nao">
+                            type="radio" 
+                            name="ajuda" 
+                            id="nao"
+                            value="nao">
                         <small>Eu mesmo carrego</small>
                     </div>
 
@@ -155,6 +155,63 @@
 
                 </section>
 
+                <section>
+
+                    <div>
+                        <label for="data">DATA</label>
+                        <input 
+                            type="date" 
+                            name="data" 
+                            id="data"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="horario">HORÁRIO</label>
+                        <input 
+                            type="time" 
+                            name="horario" 
+                            id="horario"
+                            required>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <p>QUASE LÁ</p>
+                    <H2>Confira seus dados</H2>
+
+                    <div>
+                        <p>
+                            <strong>Retirada:</strong>
+                            <span id="resumo-retirada"></span>
+                        </p>
+
+                        <p>
+                            <strong>Entrega:</strong>
+                            <span id="resumo-entrega"></span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <strong>Itens:</strong>
+                            <span id="resumo-itens"></span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <strong>Acesso:</strong>
+                            <span id="resumo-acesso"></span>
+                            <span id="obs-resumo-acesso"></span>
+                        </p>
+
+                    </div>
+
+                </section>
+
             </section>
 
 
@@ -162,7 +219,12 @@
         </form>
     </main>
 
-    <footer></footer>
+    <footer>
+
+        <button type="button">Voltar</button>
+        <button type="submit">Enviar pelo Whatsapp</button>
+
+    </footer>
 
  
 </body>
