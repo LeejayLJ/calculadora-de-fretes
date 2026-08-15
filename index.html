@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,50 +9,62 @@
 
     <title>Calculadora de fretes</title>
 </head>
+
 <body>
 
     <header>
 
-        <h1>Luciano Fretes</h1>
-        <p>Solicite seu orçamento</p>
-        
+        <div>
+            <img src="img/logo fretee.jpeg" alt="logotipo frete">
+        </div>
+
+        <div>
+            <h1>Luciano Fretes</h1>
+            <p>Solicite seu orçamento</p>
+        </div>
+
     </header>
 
     <main>
+
         <form action="">
 
-            <section>
+            <!-- RETIRADA E ENTREGA -->
+            <section class="">
 
                 <h2>De onde para onde vamos?</h2>
                 <p>Informe os locais de retirada e entrega do seu frete.</p>
 
-                    <div>
-                        <label for="retirada">LOCAL DE RETIRADA</label>
-                        <input
-                            type="text"
-                            name="retirada"
-                            id="retirada"
-                            required
-                            placeholder="Digite o endereço">
-                    </div>
+                <div class="bkg-white">
+                    <label for="retirada">LOCAL DE RETIRADA</label>
+                    <input
+                        type="text"
+                        name="retirada"
+                        id="retirada"
+                        required
+                        placeholder="Digite o endereço">
+                </div>
 
-                    <div>
-                        <label for="entrega">LOCAL DE ENTREGA</label>
-                        <input
-                            type="text"
-                            name="entrega"
-                            id="entrega"
-                            required
-                            placeholder="Digite o endereço">
-                    </div>
+                <div class="bkg-white">
+                    <label for="entrega">LOCAL DE ENTREGA</label>
+                    <input
+                        type="text"
+                        name="entrega"
+                        id="entrega"
+                        required
+                        placeholder="Digite o endereço">
+                </div>
 
-                    <small>Quanto mais completo o endereço, mais fácil será calcular seu frete.</small><
+                <small>
+                    Quanto mais completo o endereço, mais fácil será calcular seu frete.
+                </small>
 
-                    <button type="button">Continuar</button>
+                <button type="button">Continuar</button>
 
             </section>
 
 
+            <!-- ITENS DO FRETE -->
             <section>
 
                 <h2>O que vamos transportar?</h2>
@@ -68,164 +80,213 @@
                         placeholder="Ex: 1 geladeira, 1 sofá, 3 caixas, 1 cama...">
                 </div>
 
-                <small>Por favor envie fotos ou videos dos itens via Whatsapp para facilitar a avaliação.</small>
+                <small>
+                    Por favor envie fotos ou vídeos dos itens via WhatsApp para facilitar a avaliação.
+                </small>
 
                 <button type="button">Voltar</button>
                 <button type="button">Continuar</button>
 
             </section>
 
+
+            <!-- ACESSO -->
             <section>
 
-                <fieldset>
+                <h2>Como é o acesso?</h2>
+                <p>Essas informações ajudam a calcular o serviço necessário.</p>
 
-                    <h2>Como é o acesso?</h2>
-                    <p>Essas informações ajudam a calcular o serviço necessário.</p>
+                <h3>Acesso nos locais</h3>
 
-                    <h3>Acesso nos locais</h3>
+                <div>
+                    <label for="terreo">Tudo térreo</label>
+                    <input
+                        type="checkbox"
+                        name="acesso"
+                        id="terreo"
+                        value="terreo">
 
-                    <div>
-                        <label for="terreo">Tudo térreo</label>
-                        <input 
-                            type="checkbox" 
-                            name="acesso" 
-                            id="terreo"
-                            value="terreo">
-                        <small>Sem escadas</small>
-                    </div>
+                    <small>Sem escadas</small>
+                </div>
 
-                    <div>
-                        <label for="escada">Tem escada</label>
-                        <input 
-                            type="checkbox" 
-                            name="acesso" 
-                            id="escada"
-                            value="escada">
-                        <small>Um ou mais lances</small>
-                    </div>
+                <div>
+                    <label for="escada">Tem escada</label>
+                    <input
+                        type="checkbox"
+                        name="acesso"
+                        id="escada"
+                        value="escada">
 
-                    <div>
-                        <label for="elevador">Tem elevador</label>
-                        <input 
-                            type="checkbox" 
-                            name="acesso" 
-                            id="elevador"
-                            value="elevador">
-                        <small>Elevador disponível</small>
-                    </div>
+                    <small>Um ou mais lances</small>
+                </div>
 
-                    <div>
-                        <label for="observacao-acesso">Observação:</label>
-                        <textarea name="observacao" id="observacao-acesso" required placeholder="Quantos andares?"></textarea>
-                    </div>
+                <div>
+                    <label for="elevador">Tem elevador</label>
+                    <input
+                        type="checkbox"
+                        name="acesso"
+                        id="elevador"
+                        value="elevador">
 
-                </fieldset>
+                    <small>Elevador disponível</small>
+                </div>
 
-                <section>
+                <div>
+                    <label for="observacao-acesso">Observação:</label>
 
-                    <h2>Precisa de ajuda para carregar?</h2>
+                    <textarea
+                        name="observacao"
+                        id="observacao-acesso"
+                        required
+                        placeholder="Quantos andares?">
+                    </textarea>
+                </div>
 
-                    <div>
-                        <label for="sim">Sim</label>
-                        <input
-                            type="radio"
-                            name="ajuda"
-                            id="sim"
-                            value="sim">
-                        <small>Preciso de ajuda</small>
-                    </div>
-
-                    <div>
-                        <label for="nao">Não</label>
-                        <input 
-                            type="radio" 
-                            name="ajuda" 
-                            id="nao"
-                            value="nao">
-                        <small>Eu mesmo carrego</small>
-                    </div>
-
-                    <div>
-                        <label for="observacao-ajuda">Observação:</label>
-                        <textarea name="observacao-ajuda" id="observacao-ajuda" required placeholder="Quantos ajudantes ou outro detalhe?"></textarea>
-                    </div>
-
-                    <button type="button">Voltar</button>
-                    <button type="button">Continuar</button>
-
-                </section>
-
-                <section>
-
-                    <div>
-                        <label for="data">DATA</label>
-                        <input 
-                            type="date" 
-                            name="data" 
-                            id="data"
-                            required>
-                    </div>
-
-                    <div>
-                        <label for="horario">HORÁRIO</label>
-                        <input 
-                            type="time" 
-                            name="horario" 
-                            id="horario"
-                            required>
-                    </div>
-
-                </section>
-
-                <section>
-
-                    <p>QUASE LÁ</p>
-                    <H2>Confira seus dados</H2>
-
-                    <div>
-                        <p>
-                            <strong>Retirada:</strong>
-                            <span id="resumo-retirada"></span>
-                        </p>
-
-                        <p>
-                            <strong>Entrega:</strong>
-                            <span id="resumo-entrega"></span>
-                        </p>
-                    </div>
-
-                    <div>
-                        <p>
-                            <strong>Itens:</strong>
-                            <span id="resumo-itens"></span>
-                        </p>
-                    </div>
-
-                    <div>
-                        <p>
-                            <strong>Acesso:</strong>
-                            <span id="resumo-acesso"></span>
-                            <span id="obs-resumo-acesso"></span>
-                        </p>
-
-                    </div>
-
-                </section>
+                <button type="button">Voltar</button>
+                <button type="button">Continuar</button>
 
             </section>
 
 
+            <!-- AJUDA PARA CARREGAR -->
+            <section>
+
+                <h2>Precisa de ajuda para carregar?</h2>
+
+                <div>
+                    <label for="sim">Sim</label>
+                    <input
+                        type="radio"
+                        name="ajuda"
+                        id="sim"
+                        value="sim">
+
+                    <small>Preciso de ajuda</small>
+                </div>
+
+                <div>
+                    <label for="nao">Não</label>
+                    <input
+                        type="radio"
+                        name="ajuda"
+                        id="nao"
+                        value="nao">
+
+                    <small>Eu mesmo carrego</small>
+                </div>
+
+                <div>
+                    <label for="observacao-ajuda">Observação:</label>
+
+                    <textarea
+                        name="observacao-ajuda"
+                        id="observacao-ajuda"
+                        required
+                        placeholder="Quantos ajudantes ou outro detalhe?">
+                    </textarea>
+                </div>
+
+                <button type="button">Voltar</button>
+                <button type="button">Continuar</button>
+
+            </section>
+
+
+            <!-- DATA E HORÁRIO -->
+            <section>
+
+                <h2>Quando será o frete?</h2>
+
+                <div>
+                    <label for="data">DATA</label>
+                    <input
+                        type="date"
+                        name="data"
+                        id="data"
+                        required>
+                </div>
+
+                <div>
+                    <label for="horario">HORÁRIO</label>
+                    <input
+                        type="time"
+                        name="horario"
+                        id="horario"
+                        required>
+                </div>
+
+                <button type="button">Voltar</button>
+                <button type="button">Continuar</button>
+
+            </section>
+
+
+            <!-- RESUMO -->
+            <section>
+
+                <p>QUASE LÁ</p>
+                <h2>Confira seus dados</h2>
+
+                <div>
+                    <p>
+                        <strong>Retirada:</strong>
+                        <span id="resumo-retirada"></span>
+                    </p>
+
+                    <p>
+                        <strong>Entrega:</strong>
+                        <span id="resumo-entrega"></span>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <strong>Itens:</strong>
+                        <span id="resumo-itens"></span>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <strong>Acesso:</strong>
+                        <span id="resumo-acesso"></span>
+                        <span id="obs-resumo-acesso"></span>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <strong>Ajuda:</strong>
+                        <span id="resumo-ajuda"></span>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <strong>Data:</strong>
+                        <span id="resumo-data"></span>
+                    </p>
+
+                    <p>
+                        <strong>Horário:</strong>
+                        <span id="resumo-horario"></span>
+                    </p>
+                </div>
+
+                <button type="button">Voltar</button>
+                <button type="submit">Enviar pelo WhatsApp</button>
+
+            </section>
 
         </form>
+
     </main>
 
     <footer>
 
-        <button type="button">Voltar</button>
-        <button type="submit">Enviar pelo Whatsapp</button>
+        <p>© 2026 Luciano Fretes</p>
 
     </footer>
 
- 
 </body>
 </html>
