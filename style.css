@@ -43,6 +43,16 @@ footer {
 
 button {
     margin-top: 0.5rem;
+    width: fit-content;
+}
+
+input {
+    border: none;
+    cursor: pointer;
+}
+
+p {
+    color: gray;
 }
 
 /* GERAL */
@@ -50,12 +60,36 @@ button {
 
 /* UTILITARIAS */
 
-.bkg-white {
+.div-bkg-white {
     background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
 }
 
 .botao-block {
     display: block;
+}
+
+.div-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-flex-row {
+    display: flex;
+}
+
+.div-green-icon {
+    border-radius: 20%;
+    background-color: lightgreen;
+    align-itens: center;
+    justify-content: center;
+}
+
+.section-space {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* UTILITARIAS */
