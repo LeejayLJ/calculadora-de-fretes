@@ -62,83 +62,85 @@
                 <section class="section-space">
                     <h2>O que vamos transportar?</h2>
                     <p class="p-margin">Conta pra gente quais são os itens do seu frete.</p>
-                    <div>
-                        <label for="itens">ITENS DO FRETE</label>
-                        <input
-                            type="text"
-                            name="itens"
-                            id="itens"
-                            required
-                            placeholder="Ex: 1 geladeira, 1 sofá, 3 caixas, 1 cama...">
+                    <div class="div-flex-row div-configs div-padding">
+                        <div class="div-green-icon">📦</div>
+                        <div class="div-flex-column div-margin">
+                            <label for="itens" class="label-size">ITENS DO FRETE</label>
+                            <input
+                                type="text"
+                                name="itens"
+                                id="itens"
+                                required
+                                placeholder="Ex: 1 geladeira, 1 sofá, 3 caixas, 1 cama...">
+                        </div>
                     </div>
-                    <small>
-                        Por favor envie fotos ou vídeos dos itens via WhatsApp para facilitar a avaliação.
+                    <small class="small-configs">
+                        💡 Por favor envie fotos ou vídeos dos itens via WhatsApp para facilitar a avaliação.
                     </small>
                     
                 </section>
                 <!-- ACESSO -->
                 <section class="section-space">
                     <h2>Como é o acesso?</h2>
-                    <p>Essas informações ajudam a calcular o serviço necessário.</p>
-                    <h3>Acesso nos locais</h3>
-                    <div>
-                        <label for="terreo">Tudo térreo</label>
-                        <input
-                            type="checkbox"
-                            name="acesso"
-                            id="terreo"
-                            value="terreo">
-                        <small>Sem escadas</small>
+                    <p class="p-margin" style="text-align:center;">Essas informações ajudam a calcular o serviço necessário.</p>
+                    <div class="div-flex-row div-checkbox div-padding">
+                        <div class="">
+                            <span class="span-green-icon">🏠</span>
+                            <label for="terreo">TÉRREO</label>
+                            <input
+                                type="checkbox"
+                                name="acesso"
+                                id="terreo"
+                                value="terreo">
+                        </div>
+                        <div>
+                            <span class="span-green-icon">🪜</span>
+                            <label for="escada">ESCADA</label>
+                            <input
+                                type="checkbox"
+                                name="acesso"
+                                id="escada"
+                                value="escada">
+                        </div>
+                        <div>
+                            <span class="span-green-icon">🛗</span>
+                            <label for="elevador">ELEVADOR</label>
+                            <input
+                                type="checkbox"
+                                name="acesso"
+                                id="elevador"
+                                value="elevador">
+                        </div>
                     </div>
                     <div>
-                        <label for="escada">Tem escada</label>
-                        <input
-                            type="checkbox"
-                            name="acesso"
-                            id="escada"
-                            value="escada">
-                        <small>Um ou mais lances</small>
-                    </div>
-                    <div>
-                        <label for="elevador">Tem elevador</label>
-                        <input
-                            type="checkbox"
-                            name="acesso"
-                            id="elevador"
-                            value="elevador">
-                        <small>Elevador disponível</small>
-                    </div>
-                    <div>
-                        <label for="observacao-acesso">Observação:</label>
                         <textarea
                             name="observacao"
                             id="observacao-acesso"
                             required
-                            placeholder="Quantos andares?">
-                        </textarea>
+                            placeholder="Quantos andares via escada?"></textarea>
                     </div>
                     
                 </section>
                 <!-- AJUDA PARA CARREGAR -->
                 <section>
-                    <h2>Precisa de ajuda para carregar?</h2>
-                    <div>
-                        <label for="sim">Sim</label>
-                        <input
-                            type="radio"
-                            name="ajuda"
-                            id="sim"
-                            value="sim">
-                        <small>Preciso de ajuda</small>
-                    </div>
-                    <div>
-                        <label for="nao">Não</label>
-                        <input
-                            type="radio"
-                            name="ajuda"
-                            id="nao"
-                            value="nao">
-                        <small>Eu mesmo carrego</small>
+                    <h2 class="centralizar-h2">Precisa de ajuda para carregar?</h2>
+                    <div class="div-flex-row div-checkbox div-padding">
+                        <div>
+                            <label for="sim">Sim</label>
+                            <input
+                                type="radio"
+                                name="ajuda"
+                                id="sim"
+                                value="sim">
+                        </div>
+                        <div>
+                            <label for="nao">Não</label>
+                            <input
+                                type="radio"
+                                name="ajuda"
+                                id="nao"
+                                value="nao">
+                        </div>
                     </div>
                     <div>
                         <label for="observacao-ajuda">Observação:</label>
@@ -146,73 +148,72 @@
                             name="observacao-ajuda"
                             id="observacao-ajuda"
                             required
-                            placeholder="Quantos ajudantes ou outro detalhe?">
-                        </textarea>
+                            placeholder="Quantos ajudantes ou outro detalhe?"></textarea>
                     </div>
                     
                 </section>
                 <!-- DATA E HORÁRIO -->
                 <section>
-                    <h2>Quando será o frete?</h2>
-                    <div>
-                        <label for="data">DATA</label>
-                        <input
-                            type="date"
-                            name="data"
-                            id="data"
-                            required>
-                    </div>
-                    <div>
-                        <label for="horario">HORÁRIO</label>
-                        <input
-                            type="time"
-                            name="horario"
-                            id="horario"
-                            required>
+                    <h2 class="centralizar-h2">Quando será o frete?</h2>
+                    <div class="div-flex-row div-checkbox div-padding">
+                        <div>
+                            <label for="data">DATA</label>
+                            <input
+                                type="date"
+                                name="data"
+                                id="data"
+                                required>
+                        </div>
+                        <div>
+                            <label for="horario">HORÁRIO</label>
+                            <input
+                                type="time"
+                                name="horario"
+                                id="horario"
+                                required>
+                        </div>
                     </div>
                     
                 </section>
                 <!-- RESUMO -->
                 <section>
-                    <p>QUASE LÁ</p>
-                    <h2>Confira seus dados</h2>
+                    <h2 class="h2-dados">Confira seus dados</h2>
                     <div>
-                        <p>
+                        <p class="p-dados linhas-retirada">
                             <strong>Retirada:</strong>
-                            <span id="resumo-retirada"></span>
+                            <span id="resumo-retirada">Não informado</span>
                         </p>
-                        <p>
+                        <p class="p-dados outros-linhas">
                             <strong>Entrega:</strong>
-                            <span id="resumo-entrega"></span>
+                            <span id="resumo-entrega">Não informado</span>
                         </p>
                     </div>
                     <div>
-                        <p>
+                        <p class="p-dados outros-linhas">
                             <strong>Itens:</strong>
-                            <span id="resumo-itens"></span>
+                            <span id="resumo-itens">Não informado</span>
                         </p>
                     </div>
                     <div>
-                        <p>
+                        <p class="p-dados outros-linhas">
                             <strong>Acesso:</strong>
-                            <span id="resumo-acesso"></span>
-                            <span id="obs-resumo-acesso"></span>
+                            <span id="resumo-acesso">Não informado</span>
                         </p>
                     </div>
                     <div>
-                        <p>
+                        <p class="p-dados outros-linhas">
                             <strong>Ajuda:</strong>
-                            <span id="resumo-ajuda"></span>
+                            <span id="resumo-ajuda">Não informado</span>
                         </p>
                     </div>
                     <div>
-                        <p>
+                        <p class="p-dados outros-linhas">
                             <strong>Data:</strong>
-                            <span id="resumo-data"></span>
+                            <span id="resumo-data">Não informado</span>
                         </p>
-                        <p>
+                        <p class="p-dados outros-linhas">
                             <strong>Horário:</strong>
-                            <span id="resumo-horario"></span>
+                            <span id="resumo-horario">Não informado</span>
                         </p>
                     </div>
                     <button type="button">Voltar</button>

@@ -42,6 +42,8 @@ form {
 
 footer {
     margin-top: 1rem;
+    background-color: var(--cor-principal);
+    text-align: center;
 }  
 
 button {
@@ -54,6 +56,11 @@ input {
     cursor: pointer;
     border: none;
     outline: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: green;
 }
 
 h1 {
@@ -69,9 +76,22 @@ h1 + p {
 } 
 
 h2 {
-    border-left: 3px solid var(--cor-principal);
-    border-right: 3px solid var(--cor-principal);
     margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    background-color: white;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+textarea:focus-within {
+    border: 1px solid green;
+    box-shadow: 0 0 12px rgba(80, 220, 100, 0.7);
 }
 
 /* GERAL */
@@ -131,10 +151,32 @@ h2 {
     margin-left: 0.5rem;
 }
 
+.div-gap {
+   gap: 1rem;
+}
+
+.div-checkbox {
+    justify-content: space-evenly;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.div-checkbox:focus-within {
+    border: 1px solid green;
+    box-shadow: 0 0 12px rgba(80, 220, 100, 0.7);
+}
+
 .section-space {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.centralizar-h2 {
+    text-align: center; 
+    margin-bottom: 0.5rem;
 }
 
 
@@ -149,12 +191,43 @@ h2 {
     margin-top: -0.5rem;
 }
 
+.p-dados {
+    display: flex;
+    justify-content: space-between;
+}
+
 .small-configs {
     background-color: var(--cor-avisos);
     padding: 0.5rem;
     font-size: xx-small;
     border-radius: 5px;
     text-align: center;
+}
+
+.span-green-icon {
+    border-radius: 5px;
+    background-color: #90ee904f;
+    align-items: center;
+    width: 2rem;
+}
+
+.h2-dados {
+    background-color: var(--cor-principal);
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: 0.5px solid gray;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: none;
+}
+
+.linhas-retirada {
+    border: 0.5px solid gray;
+}
+
+.outros-linhas {
+    border: 0.5px solid gray;
+    border-top: none;
 }
 
 /* UTILITARIAS */
