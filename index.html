@@ -3,227 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Luciano Fretes | Orçamento Rápido</title>
     <link rel="stylesheet" href="style.css">
-
-    <title>Calculadora de fretes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <div class="container">
-        <header>
-            <div>
+    <div class="container-aplicativo">
+
+        <!-- CABEÇALHO -->
+        <header class="cabecalho-aplicativo">
+            <div class="selo-marca">🚚</div>
+            <div class="informacoes-marca">
                 <h1>Luciano Fretes</h1>
-                <p>Solicite seu orçamento</p>
+                <p>Solicite seu orçamento rápido</p>
             </div>
         </header>
-        <main>
-            <form action="">
-                <!-- RETIRADA E ENTREGA -->
-                <section class="section-space">
-                    <h2>De onde para onde vamos?</h2>
-                    <p class="p-margin">Informe os locais de retirada e entrega do seu frete.</p>
-                    <div class="div-flex-row">
-                        <div class="div-configs div-flex-row div-padding">
-                            <div class="div-green-icon">📍</div>
-                            <div class="div-flex-column div-margin">
-                                <label for="entrega" class="label-size">LOCAL DE ENTREGA</label>
-                                <input
-                                    type="text"
-                                    name="entrega"
-                                    id="entrega"
-                                    required
-                                    placeholder="Digite o endereço">
+
+        <!-- FORMULÁRIO -->
+        <main class="conteudo-principal">
+            <form id="formulario-frete">
+
+                <!-- 1. TRAJETO -->
+                <section class="secao-cartao">
+                    <div class="titulo-secao">
+                        <h2>De onde para onde?</h2>
+                        <p>Informe os endereços de partida e destino</p>
+                    </div>
+
+                    <div class="grupo-input">
+                        <div class="icone-input">📍</div>
+                        <div class="conteudo-input">
+                            <label for="origem">Local de Retirada</label>
+                            <input type="text" id="origem" name="origem" placeholder="Ex: Rua das Flores, 123" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo-input">
+                        <div class="icone-input">🏁</div>
+                        <div class="conteudo-input">
+                            <label for="destino">Local de Entrega</label>
+                            <input type="text" id="destino" name="destino" placeholder="Ex: Av. Central, 456" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo-input">
+                        <div class="icone-input">🗺️</div>
+                        <div class="conteudo-input">
+                            <label for="distancia">Distância Estimada (KM)</label>
+                            <input type="number" id="distancia" name="distancia" placeholder="Ex: 15">
+                        </div>
+                    </div>
+
+                    <div class="alerta-informativo">
+                        <span>💡</span>
+                        <p>Quanto mais detalhado o endereço, mais preciso será o orçamento.</p>
+                    </div>
+                </section>
+
+                <!-- 2. ITENS -->
+                <section class="secao-cartao">
+                    <div class="titulo-secao">
+                        <h2>O que vamos transportar?</h2>
+                        <p>Liste os principais objetos</p>
+                    </div>
+
+                    <div class="grupo-input grupo-textarea">
+                        <div class="icone-input">📦</div>
+                        <div class="conteudo-input">
+                            <label for="itens">Descrição dos Itens</label>
+                            <textarea id="itens" name="itens" placeholder="Ex: 1 Geladeira, 1 Sofá 3 lugares, 4 caixas médias..." required></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. ACESSO -->
+                <section class="secao-cartao">
+                    <div class="titulo-secao">
+                        <h2>Como é o acesso?</h2>
+                        <p>Selecione as condições dos locais</p>
+                    </div>
+
+                    <div class="grade-opcoes">
+                        <label class="cartao-opcao" for="terreo">
+                            <input type="checkbox" id="terreo" name="acesso" value="Térreo">
+                            <span class="icone-opcao">🏠</span>
+                            <span class="nome-opcao">Térreo</span>
+                            <small>Sem escadas</small>
+                        </label>
+
+                        <label class="cartao-opcao" for="escada">
+                            <input type="checkbox" id="escada" name="acesso" value="Escada">
+                            <span class="icone-opcao">🪜</span>
+                            <span class="nome-opcao">Escada</span>
+                            <small>Com lances</small>
+                        </label>
+
+                        <label class="cartao-opcao" for="elevador">
+                            <input type="checkbox" id="elevador" name="acesso" value="Elevador">
+                            <span class="icone-opcao">🛗</span>
+                            <span class="nome-opcao">Elevador</span>
+                            <small>Disponível</small>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- 4. AJUDA -->
+                <section class="secao-cartao">
+                    <div class="titulo-secao">
+                        <h2>Precisa de ajudante?</h2>
+                        <p>Para carregar e descarregar</p>
+                    </div>
+
+                    <div class="grade-opcoes grade-2">
+                        <label class="cartao-opcao" for="ajuda-sim">
+                            <input type="radio" id="ajuda-sim" name="ajuda" value="Sim, preciso" checked>
+                            <span class="icone-opcao">💪</span>
+                            <span class="nome-opcao">Sim</span>
+                            <small>Preciso de ajuda</small>
+                        </label>
+
+                        <label class="cartao-opcao" for="ajuda-nao">
+                            <input type="radio" id="ajuda-nao" name="ajuda" value="Não preciso">
+                            <span class="icone-opcao">👍</span>
+                            <span class="nome-opcao">Não</span>
+                            <small>Eu mesmo carrego</small>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- 5. AGENDAMENTO -->
+                <section class="secao-cartao">
+                    <div class="titulo-secao">
+                        <h2>Quando será?</h2>
+                        <p>Escolha a melhor data e horário</p>
+                    </div>
+
+                    <div class="grade-inputs">
+                        <div class="grupo-input">
+                            <div class="icone-input">📅</div>
+                            <div class="conteudo-input">
+                                <label for="data">Data</label>
+                                <input type="date" id="data" name="data" required>
+                            </div>
+                        </div>
+
+                        <div class="grupo-input">
+                            <div class="icone-input">⏰</div>
+                            <div class="conteudo-input">
+                                <label for="hora">Horário</label>
+                                <input type="time" id="hora" name="hora" required>
                             </div>
                         </div>
                     </div>
-                    <div class="div-flex-row">
-                        <div class="div-configs div-flex-row div-padding">
-                            <div class="div-green-icon">🏁</div>
-                            <div class="div-flex-column div-margin">
-                                <label for="entrega" class="label-size">LOCAL DE ENTREGA</label>
-                                <input
-                                    type="text"
-                                    name="entrega"
-                                    id="entrega"
-                                    required
-                                    placeholder="Digite o endereço">
-                            </div>
-                        </div>
-                    </div>
-                    <small class="small-configs">
-                        💡 Quanto mais completo o endereço, mais fácil será calcular seu frete.
-                    </small>
-                    
                 </section>
-                <!-- ITENS DO FRETE -->
-                <section class="section-space">
-                    <h2>O que vamos transportar?</h2>
-                    <p class="p-margin">Conta pra gente quais são os itens do seu frete.</p>
-                    <div class="div-flex-row div-configs div-padding">
-                        <div class="div-green-icon">📦</div>
-                        <div class="div-flex-column div-margin">
-                            <label for="itens" class="label-size">ITENS DO FRETE</label>
-                            <input
-                                type="text"
-                                name="itens"
-                                id="itens"
-                                required
-                                placeholder="Ex: 1 geladeira, 1 sofá, 3 caixas, 1 cama...">
+
+                <!-- 6. RESUMO -->
+                <section class="secao-cartao caixa-resumo">
+                    <div class="cabecalho-resumo">
+                        <span>RESUMO DO PEDIDO</span>
+                        <h3>Confira seus dados</h3>
+                    </div>
+
+                    <div class="lista-resumo">
+                        <div class="item-resumo">
+                            <span class="rotulo">Retirada:</span>
+                            <strong class="valor" id="resumo-origem">—</strong>
+                        </div>
+                        <div class="item-resumo">
+                            <span class="rotulo">Entrega:</span>
+                            <strong class="valor" id="resumo-destino">—</strong>
+                        </div>
+                        <div class="item-resumo">
+                            <span class="rotulo">Distância:</span>
+                            <strong class="valor" id="resumo-distancia">—</strong>
+                        </div>
+                        <div class="item-resumo">
+                            <span class="rotulo">Itens:</span>
+                            <strong class="valor" id="resumo-itens">—</strong>
+                        </div>
+                        <div class="item-resumo">
+                            <span class="rotulo">Data/Hora:</span>
+                            <strong class="valor" id="resumo-data-hora">—</strong>
                         </div>
                     </div>
-                    <small class="small-configs">
-                        💡 Por favor envie fotos ou vídeos dos itens via WhatsApp para facilitar a avaliação.
-                    </small>
-                    
                 </section>
-                <!-- ACESSO -->
-                <section class="section-space">
-                    <h2>Como é o acesso?</h2>
-                    <p class="p-margin" style="text-align:center;">Essas informações ajudam a calcular o serviço necessário.</p>
-                    <div class="div-flex-row div-checkbox div-padding">
-                        <div class="">
-                            <span class="span-green-icon">🏠</span>
-                            <label for="terreo">TÉRREO</label>
-                            <input
-                                type="checkbox"
-                                name="acesso"
-                                id="terreo"
-                                value="terreo">
-                        </div>
-                        <div>
-                            <span class="span-green-icon">🪜</span>
-                            <label for="escada">ESCADA</label>
-                            <input
-                                type="checkbox"
-                                name="acesso"
-                                id="escada"
-                                value="escada">
-                        </div>
-                        <div>
-                            <span class="span-green-icon">🛗</span>
-                            <label for="elevador">ELEVADOR</label>
-                            <input
-                                type="checkbox"
-                                name="acesso"
-                                id="elevador"
-                                value="elevador">
-                        </div>
-                    </div>
-                    <div>
-                        <textarea
-                            name="observacao"
-                            id="observacao-acesso"
-                            required
-                            placeholder="Quantos andares via escada?"></textarea>
-                    </div>
-                    
-                </section>
-                <!-- AJUDA PARA CARREGAR -->
-                <section>
-                    <h2 class="centralizar-h2">Precisa de ajuda para carregar?</h2>
-                    <div class="div-flex-row div-checkbox div-padding">
-                        <div>
-                            <label for="sim">Sim</label>
-                            <input
-                                type="radio"
-                                name="ajuda"
-                                id="sim"
-                                value="sim">
-                        </div>
-                        <div>
-                            <label for="nao">Não</label>
-                            <input
-                                type="radio"
-                                name="ajuda"
-                                id="nao"
-                                value="nao">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="observacao-ajuda">Observação:</label>
-                        <textarea
-                            name="observacao-ajuda"
-                            id="observacao-ajuda"
-                            required
-                            placeholder="Quantos ajudantes ou outro detalhe?"></textarea>
-                    </div>
-                    
-                </section>
-                <!-- DATA E HORÁRIO -->
-                <section>
-                    <h2 class="centralizar-h2">Quando será o frete?</h2>
-                    <div class="div-flex-row div-checkbox div-padding">
-                        <div>
-                            <label for="data">DATA</label>
-                            <input
-                                type="date"
-                                name="data"
-                                id="data"
-                                required>
-                        </div>
-                        <div>
-                            <label for="horario">HORÁRIO</label>
-                            <input
-                                type="time"
-                                name="horario"
-                                id="horario"
-                                required>
-                        </div>
-                    </div>
-                    
-                </section>
-                <!-- RESUMO -->
-                <section>
-                    <h2 class="h2-dados">Confira seus dados</h2>
-                    <div>
-                        <p class="p-dados linhas-retirada">
-                            <strong>Retirada:</strong>
-                            <span id="resumo-retirada">Não informado</span>
-                        </p>
-                        <p class="p-dados outros-linhas">
-                            <strong>Entrega:</strong>
-                            <span id="resumo-entrega">Não informado</span>
-                        </p>
-                    </div>
-                    <div>
-                        <p class="p-dados outros-linhas">
-                            <strong>Itens:</strong>
-                            <span id="resumo-itens">Não informado</span>
-                        </p>
-                    </div>
-                    <div>
-                        <p class="p-dados outros-linhas">
-                            <strong>Acesso:</strong>
-                            <span id="resumo-acesso">Não informado</span>
-                        </p>
-                    </div>
-                    <div>
-                        <p class="p-dados outros-linhas">
-                            <strong>Ajuda:</strong>
-                            <span id="resumo-ajuda">Não informado</span>
-                        </p>
-                    </div>
-                    <div>
-                        <p class="p-dados outros-linhas">
-                            <strong>Data:</strong>
-                            <span id="resumo-data">Não informado</span>
-                        </p>
-                        <p class="p-dados outros-linhas">
-                            <strong>Horário:</strong>
-                            <span id="resumo-horario">Não informado</span>
-                        </p>
-                    </div>
-                    <button type="button">Voltar</button>
-                    <button type="submit">Enviar pelo WhatsApp</button>
-                </section>
-                <button type="submit"></button>
+
+                <!-- BARRA FIXA INFERIOR -->
+                <div class="barra-inferior">
+                    <button type="submit" class="botao-principal">
+                        <span>Enviar pelo WhatsApp</span>
+                        <span class="icone-botao">💬</span>
+                    </button>
+                </div>
+
             </form>
         </main>
-        <footer>
-            <p>© 2026 Luciano Fretes</p>
+
+        <footer class="rodape-aplicativo">
+            <p>© 2026 Luciano Fretes • Todos os direitos reservados</p>
         </footer>
     </div>
 
